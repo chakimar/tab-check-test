@@ -27,8 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ls -ltr ${{ github.workspace }}
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: grep -r $'\t' ${{ github.workspace }}/*.txt; test $? -eq 0 && exit 1
+        run: grep -r $'\t' ./*.txt; test $? -eq 0 && exit 1
