@@ -29,3 +29,4 @@ jobs:
       - name: Run a one-line script
         run: |
           grep -r $'\t' ./*.txt || true
+          [ $? -eq 0 ]; exit 1
