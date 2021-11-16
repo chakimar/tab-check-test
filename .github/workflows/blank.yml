@@ -28,4 +28,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          if grep -r $'\t' *.txt; then exit 1; fi
+          if grep -lr $'\t' --include='*.txt' .; then exit 1; fi
